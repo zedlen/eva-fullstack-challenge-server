@@ -1,26 +1,43 @@
-# eva-server
+# Eva Fullstack Challenge
 
-a [Sails v1](https://sailsjs.com) application
+Imagine it's your first day at Eva and you are fresh out of the onboarding process.
+You've been assigned to the Backend team that will support the exploration experience at our Eva Centers in shopping malls.
 
+Women book explorations through our website.
+On the date of their exploration women visit the center, answer some questions about their health, and are scanned by our thermal cameras.
+We recommend you watch this [video](https://youtu.be/12h-0qUdJag) for more context on the experience.
 
-### Links
+Back to work, you log into the issue tracker and find that you've already been assigned the following ticket:
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+```
+ISSUE 01
 
+The Science & Data team has detected a large correlation between consumed medications and breast cancer.
+They've requested a new endpoint that will allow them to query explorations based on the consumed medications that were reported in the survey.
 
-### Version info
+REQUIREMENTS
 
-This app was originally generated on Sat Dec 07 2019 17:38:51 GMT-0600 (GMT-06:00) using Sails v1.2.3.
+* Time based filtering, the team only wants to query a specific time frame at a time.
+* Clinic filtering, the team only wants to query a specific clinic at a time.
+* Filter by consumed medications STRICT MODE, the team wants to find out which explorations match ALL of the medications specified.
+* Filter by consumed medications LAX MODE, the team wants to find out which explorations match ANY of the medications specified.
+```
 
-<!-- Internally, Sails used [`sails-generate@1.16.13`](https://github.com/balderdashy/sails-generate/tree/v1.16.13/lib/core-generators/new). -->
+## Your mission, should you choose to accept it
 
+- Clone this repo and create `eva-fullstack-challenge-server` and `eva-fullstack-challenge-client` repos (DO NOT FORK THIS REPO).
 
+### eva-fullstack-challenge-server
+- Seed a database of your choice with the provided explorations.
+- Implement an API REST written in NodeJS with a framework of your choice that implements the required endpoint.
+- Your api endpoint should not be public (Authentication).
+- Your api endpoint should be documented.
+- At least a unit test of the ideal flow should be implemented.
+- It should be easy for your teammates to understand your repo and use your code in the unfortunate case of your sudden combustion.
 
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
-
+### eva-fullstack-challenge-client
+- Build a web app written in ReactJS.
+- Implement a view that allows users to introduce a clinic name, a list of medications and a checkbox for strict or lax mode. This view will request the explorations with the provided params and should list the explorations found. 
+- Your web app should be documented.
+- At least one react component should be tested.
+- It should be easy for your teammates to understand your repo and use your code in the unfortunate case of your sudden combustion.
