@@ -6,6 +6,18 @@
  */
 
 module.exports = {
+
+  /**
+   * This fuction will list the bookings with its exploration results
+   * is needed to be sended by query params the following params:
+   * date_start = date string from when the search should take place the format of date have to be: YYYY-MM-DD
+   * date_end = date string until when the search should take place the format of date have to be: YYYY-MM-DD
+   * clinic = the name of the clinic to search, it have to ve in upper case
+   * mode = the mode of the filter for medications only this two are accepted: LAX, STRICT
+   * medications = an array of medications to filter, i.e.: ["HORMONE_THERAPY","ANTIBIOTICS"]
+   * 
+   * All of its params are requiered
+   */
   consumedMedicationsAnalytics : async function(req,res){
     const dateStart = req.query.date_start;
     if (dateStart === undefined) {
