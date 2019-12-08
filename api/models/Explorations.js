@@ -10,7 +10,8 @@ module.exports = {
   attributes: {
 
     bookingId:{
-      model: 'bookings'
+      model: 'bookings',
+      unique: true
     },
     consumedMedications:{
       type:'string'

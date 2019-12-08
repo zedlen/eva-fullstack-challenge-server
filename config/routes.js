@@ -9,6 +9,5 @@
  */
 
 module.exports.routes = {
-
-
+  'get /analytics/consumedMedications':'ExplorationsAnalyticsController.consumedMedicationsAnalytics'
 };

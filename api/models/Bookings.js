@@ -21,6 +21,10 @@ module.exports = {
     clinicName: {
       type:'string'
     },
+    exploration:{
+      collection:'explorations',
+      via:'bookingId'
+    }
   },
 
 };
